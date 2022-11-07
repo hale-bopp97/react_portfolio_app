@@ -51,17 +51,22 @@ function ContactPage() {
 
     return <div>
         <h1>Contact</h1>
+        <br></br>
         <form id="contact-form" onSubmit={handleSubmit}>
             <div>
                 <label htmlFor="name">Name: </label>
+                <br></br>
                 <input type="text" name="name" defaultValue={name} onBlur={handleChange}/>
             </div>
-            <div>
+            <div className='field'>
                 <label htmlFor="email">Email: </label>
+                <br></br>
                 <input type="email" name="email" defaultValue={email} onBlur={handleChange}/>
             </div>
-            <div>
-                <label htmlFor="message">message: </label>
+            <div className='field'>
+                <lable className='lable'>Message:</lable>
+                <br></br>
+                <label htmlFor="message"></label>
                 <textarea name="message" rows="5" defaultValue={message} onBlur={handleChange}/>
             </div>
             {errorMessage && (
